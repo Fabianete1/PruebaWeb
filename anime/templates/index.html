@@ -8,7 +8,7 @@
     <title>AnimeVF</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
-    <link rel="stylesheet" type="text/css" href="{% static 'css/estilos.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}"> 
     <link rel="icon" type="image/png" href="{% static 'img/icono.png '%}">
     
     
@@ -27,12 +27,12 @@
           </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
           <div class="navbar-nav mr-auto ml-auto text-center">
-            <a class="nav-item nav-link active" href="index.html">Inicio</a>
-            <a class="nav-item nav-link" href="Anime.html">Anime</a>
-            <a class="nav-item nav-link" href="Manga.html">Mangas</a>
-            <a class="nav-item nav-link" href="Galeria.html">Wallpapers</a> 
+            <a class="nav-item nav-link active" href="{% url 'index_list'%}">Inicio</a>
+            <a class="nav-item nav-link" href="{% url 'anime_list'%}">Anime</a>
+            <a class="nav-item nav-link" href="{% url 'manga_list'%}">Mangas</a>
+            <a class="nav-item nav-link" href="{% url 'galeria_list'%}">Wallpapers</a> 
             <div class="resgistro">
-                <a class="nav-item nav-link" href="Resgistro.html"  >Registro</a>
+                <a class="nav-item nav-link" href="{% url 'registro_list'%}">Registro</a>
             </div>           
           </div>
         </div>
@@ -52,13 +52,13 @@
             </ol>
             <div class="carousel-inner p-3 mb-2 ">
               <div class="carousel-item active">
-                <img class="rounded mx-auto d-block w-50 " src="img/img1.jpg" alt="First slide">
+                <img class="rounded mx-auto d-block w-50 " src="{%static 'img/img1.jpg'%}" alt="First slide">
               </div>
               <div class="carousel-item">
-                <img class="rounded mx-auto d-block w-50 " src="img/img2.jpg" alt="Second slide">
+                <img class="rounded mx-auto d-block w-50 " src="{%static 'img/img2.jpg'%}" alt="Second slide">
               </div>
               <div class="carousel-item">
-                <img class="rounded mx-auto d-block w-50 " src="img/img3.png" alt="Third slide">
+                <img class="rounded mx-auto d-block w-50 " src="{%static 'img/img3.png'%}" alt="Third slide">
               </div>
               
             </div>
@@ -116,19 +116,19 @@
               
                 <div class="row">
                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 borde">
-                  <a href="https://animeflv.net/anime/5557/kimetsu-no-yaiba"> <img src="img/i1.jpg" class="rounded mx-auto d-block m-3" alt=""></a>
+                  <a href="https://animeflv.net/anime/5557/kimetsu-no-yaiba"> <img src="{% static 'img/i1.jpg'%}" class="rounded mx-auto d-block m-3" alt=""></a>
                 </div>  
                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 borde">
-                 <a href="https://animeflv.net/anime/3451/jojos-bizarre-adventure"> <img src="img/i2.jpg" class="rounded mx-auto d-block m-3" alt=""> </a>
+                 <a href="https://animeflv.net/anime/3451/jojos-bizarre-adventure"> <img src="{% static 'img/i2.jpg'%}" class="rounded mx-auto d-block m-3" alt=""> </a>
                 </div> 
                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 borde">
-                   <a href="https://animeflv.net/anime/5495/one-piece-tv"> <img src="img/i3.jpg" class="rounded mx-auto d-block m-3" alt=""></a>
+                   <a href="https://animeflv.net/anime/5495/one-piece-tv"> <img src="{% static 'img/i3.jpg'%}" class="rounded mx-auto d-block m-3" alt=""></a>
                 </div>  
                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 borde">
-                   <a href="https://animeflv.net/anime/5592/dr-stone"> <img src="img/i4.jpg" class="rounded mx-auto d-block m-3"alt=""></a>
+                   <a href="https://animeflv.net/anime/5592/dr-stone"> <img src="{% static 'img/i4.jpg'%}" class="rounded mx-auto d-block m-3"alt=""></a>
                 </div>
                 <div class="col-sm-12 col-md-4 col-lg-3 col-xl-2 borde">
-                  <a href="https://animeflv.net/anime/4859/black-clover-tv"> <img src="img/i5.jpg" class="rounded mx-auto d-block m-3" alt=""></a>
+                  <a href="https://animeflv.net/anime/4859/black-clover-tv"> <img src="{% static 'img/i5.jpg'%}" class="rounded mx-auto d-block m-3" alt=""></a>
                 </div>  
               
                 </div>
@@ -142,7 +142,7 @@
                 <P> Email : <a href="mailto:duoc@hotmail.com">duoc@hotmail.com</a></P>
                 <p>Derechos Reservados &copy; / Vicente Liberona - Fabian Villagra   </p>         
                 </footer>
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="{% static 'js/jquery-3.4.1.min.js'%}"></script>
+        <script src="{% static 'js/bootstrap.min.js'%}"></script>
 </body>
 </html>
