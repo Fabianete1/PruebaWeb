@@ -3,28 +3,28 @@ from .models import Usuario
 
 def index_list(request):
     return render(request,
-     'anime/index.html',)
+     'index.html',)
 
 def anime_list(request):
     return render(request, 
-    'anime/Anime.html', {}) 
+    'Anime.html', {}) 
 
 def galeria_list(request):
     return render(request, 
-    'anime/Galeria.html', {}) 
+    'Galeria.html', {}) 
 
 def manga_list(request):
     return render(request, 
-    'anime/Manga.html', {})
+    'Manga.html', {})
 
 def nosotros_list(request):
     return render(request, 
-    'anime/Nosotros.html', {})
+    'Nosotros.html', {})
 
 def objeto_list(request):
     return render(request,
-     'anime/Objeto.html', {})
+     'Objeto.html', {})
 
 def registro_list(request):
     return render(request, 
-    'anime/Registro.html', {})
+    'Registro.html', {})
