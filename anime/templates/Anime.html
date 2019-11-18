@@ -26,7 +26,7 @@
           <div class="navbar-nav mr-auto ml-auto text-center">
             <a class="nav-item nav-link " href="{% url 'index_list' %}">Inicio</a>
             <a class="nav-item nav-link active" href="{% url 'anime_list' %}">Anime</a>
-            <a class="nav-item nav-link" href="{% url 'manga_list'}">Mangas</a>
+            <a class="nav-item nav-link" href="{% url 'manga_list'%}">Mangas</a>
             <a class="nav-item nav-link" href="{% url 'galeria_list' %}">Wallpapers</a>
             <div class="resgistro">
               <a class="nav-item nav-link" href="{% url 'registro_list'%}">Registro</a>
@@ -206,8 +206,8 @@
 
 
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
     
 </body>

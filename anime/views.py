@@ -27,4 +27,4 @@ def objeto_list(request):
 
 def registro_list(request):
     return render(request, 
-    'Registro.html', {})
+    'Resgistro.html', {})
