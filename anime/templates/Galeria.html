@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AnimeVF</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
-    <link rel="icon" type="image/png" href="img/icono.png" />
-    <link rel="stylesheet" type="text/css" href="css/Galeriaestilo.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'img/icono.png' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Galeriaestilo.css' %}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
    
 </head>
@@ -17,18 +18,18 @@
     <div class="menu-container">
         
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">
-              <img src="img/corazon.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+            <a class="navbar-brand" href="{% url 'index_list'%}">
+              <img src="{% static 'img/corazon.jpg' %}" width="30" height="30" class="d-inline-block align-top" alt="">
               ANIMEVF
             </a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
               <div class="navbar-nav mr-auto ml-auto text-center">
-                <a class="nav-item nav-link active" href="index.html">Inicio</a>
-                <a class="nav-item nav-link" href="Anime.html">Anime</a>
-                <a class="nav-item nav-link" href="Manga.html">Mangas</a>
-                <a class="nav-item nav-link" href="Galeria.html">Wallpapers</a> 
-                <div class="resgistro">
-                        <a class="nav-item nav-link" href="Resgistro.html"  >Registro</a>
+                <a class="nav-item nav-link active" href="{% url 'index_list'%}">Inicio</a>
+                <a class="nav-item nav-link" href="{% url 'anime_list'%}">Anime</a>
+                <a class="nav-item nav-link" href="{% url 'manga_list'%}">Mangas</a>
+                <a class="nav-item nav-link" href="{% url 'galeria_list'%}">Wallpapers</a> 
+            <div class="resgistro">
+                <a class="nav-item nav-link" href="{% url 'registro_list'%}">Registro</a>
                     </div>           
               </div>
             </div>
@@ -41,7 +42,7 @@
 
             <h3>Seleccione Imagen</h3>
             <input type="text" placeholder="Titulo" class="titulo-imagen">
-            <img src="img/imgdtstone.jpg" alt="" class="imagen-select">
+            <img src="{%static 'img/imgdtstone.jpg' %}" alt="" class="imagen-select">
             <input type="button" value="Cargar imagen" class="cargar-img">
             <input type="file" class="seleted">
             <input type="button" value="cargar" class="subir">
@@ -58,18 +59,18 @@
             <h1 class="titulogale">Galeria de Imagenes</h1>
             <input type="button" value="Wallpapers mas recientes" class="btn-recientes">
             <div class="galeria">
-                <figure><h2>imagen</h2><img src="img/img1.jpg" alt=""></figure>
-                <figure><h2>imagen</h2><img src="img/imgpokemonespesc.jpg" alt=""></figure>
-                <figure><h2>imagen</h2><img src="img/img2.jpg" alt=""></figure>
-                <figure><h2>imagen</h2><img src="img/imagenichigo.jpg" alt=""></figure>
-                <figure><h2>imagen</h2><img src="img/img3.png" alt=""></figure>
-                <figure><h2>imagen</h2><img src="img/imgaohana.jpg" alt=""></figure>
-                <figure><h2>imagen</h2><img src="img/img4.jpg" alt=""></figure>
-                <figure><h2>imagen</h2><img src="img/imglevi.jpg" alt=""></figure>
-                <figure><h2>imagen</h2><img src="img/img5.jpg" alt=""></figure>
-                <figure><h2>imagen</h2><img src="img/imgdtstone.jpg" alt=""></figure>
-                <figure><h2>imagen</h2><img src="img/img6.jpg" alt=""></figure>
-                <figure><h2>imagen</h2><img src="img/imgblackclo.jpg" alt=""></figure>
+                <figure><h2>One Punch-man</h2><img src="{%static 'img/img1.jpg'%}" alt=""></figure>
+                <figure><h2>Pokemon</h2><img src="{%static 'img/imgpokemonespesc.jpg'%}" alt=""></figure>
+                <figure><h2>One Piece</h2><img src="{%static 'img/img2.jpg'%}" alt=""></figure>
+                <figure><h2>Bleach</h2><img src="{%static 'img/imagenichigo.jpg'%}" alt=""></figure>
+                <figure><h2>HunterxHunter</h2><img src="{%static 'img/img3.png'%}" alt=""></figure>
+                <figure><h2>Ano hana</h2><img src="{%static 'img/imgaohana.jpg'%}" alt=""></figure>
+                <figure><h2>HunterxHunter</h2><img src="{%static 'img/img4.jpg'%}" alt=""></figure>
+                <figure><h2>Shingeki no kyogin</h2><img src="{%static 'img/imglevi.jpg'%}" alt=""></figure>
+                <figure><h2>Boku no hero</h2><img src="{%static 'img/img5.jpg'%}" alt=""></figure>
+                <figure><h2>Dr.stone</h2><img src="{%static 'img/imgdtstone.jpg'%}" alt=""></figure>
+                <figure><h2>Kimetsu no yaiba</h2><img src="{%static 'img/img6.jpg'%}" alt=""></figure>
+                <figure><h2>Black clover</h2><img src="{%static 'img/imgblackclo.jpg'%}" alt=""></figure>
                
                 
                 
@@ -84,7 +85,7 @@
 
     <footer>
         <P> Contacto: <a href="tel/+569123456789">+569123456789</a></P>
-		<P> Email : <a href="mailto:duoc@hotmail.com">duoc@hotmail.com</a>
+        <P> Email : <a href="mailto:duoc@hotmail.com">duoc@hotmail.com</a>
                 </P>
                 <p>Derechos Reservados &copy; / Vicente Liberona - Fabian Villagra   </p>
 
@@ -95,10 +96,10 @@
 
 
 
-    <script src="js/jquery.js"></script>
-    <script src="js/galeriajava.js"></script>
+    <script src="{%static 'js/jquery.js'%}"></script>
+    <script src="{%static 'js/galeriajava.js'%}"></script>
 
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{%static 'js/jquery-3.4.1.min.js'%}"></script>
+    <script src="{%static 'js/bootstrap.min.js'%}"></script>
 </body>
 </html>

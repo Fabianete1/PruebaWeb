@@ -1,70 +1,134 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AnimeVF</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
-    <link rel="icon" type="image/png" href="img/icono.png" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/manga.css' %}">    
+    <link rel="icon" type="image/png" href="{% static 'img/icono.png '%}">
 
 
 
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark menu-fixed">
+        <a class="navbar-brand" href="{% url 'index_list' %}">
           <img src="img/corazon.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
           ANIMEVF
         </a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <div class="navbar-nav mr-auto ml-auto text-center">
-            <a class="nav-item nav-link active" href="index.html">Inicio</a>
-            <a class="nav-item nav-link" href="Anime.html">Anime</a>
-            <a class="nav-item nav-link" href="Manga.html">Mangas</a>
-            <a class="nav-item nav-link" href="Galeria.html">Wallpapers</a> 
-            <div class="resgistro">
-                <a class="nav-item nav-link" href="Resgistro.html"  >Registro</a>
-            </div>           
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <div class="navbar-nav mr-auto ml-auto text-center">
+                <a class="nav-item nav-link " href="{% url 'index_list' %}">Inicio</a>
+                <a class="nav-item nav-link active" href="{% url 'anime_list' %}">Anime</a>
+                <a class="nav-item nav-link" href="{% url 'manga_list'}">Mangas</a>
+                <a class="nav-item nav-link" href="{% url 'galeria_list' %}">Wallpapers</a>
+                <div class="resgistro">
+                  <a class="nav-item nav-link" href="{% url 'registro_list'%}">Registro</a>
+              </div>           
           </div>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
+        
       </nav>
-        <h1>Manga</h1>
-        <div class="container-fluid fondo">
+      <div>
+          <h2 class="titulo"> Mangas</h2>
+           
+        </div>
+      <div class="container-manga">
           
-          <div class="textmanga">
-            <p> Es indudable que el manga forma esencial en cuanto a la industria del entretenimiento en Japón.
-
-              Es una palabra con la que se designa a las historietas o comics en papel o revistas y se encuentra muy ligada a la cultura nipona. Guarda estrecha relación con el anime aunque en este caso tiene que ver más con el arte o la manera de contar historias.
-              
-              Abarca una amplia gama de géneros, incluyendo acción, romance, aventura, deportes, juegos, drama, histórico, comedia y ciencia ficción. Su influencia a nivel global es muy grande y causan furor no sólo en Japón, sino en el mundo entero.
-              
-              El manga se hizo popular en los países occidentales, luego de la Primera Guerra Mundial, gracias a mangas como “Astroboy” de Osamu Tezuka. Dragon Ball es otro ejemplo del impacto internacional de este arte, cuyos personajes son héroes con una fama similar a Batman o Supermán. Te invitamos 
-              a adentrarte en el maravilloso mundo del manga donde encontrarás figuras y relatos fantásticos.</p>
-          </div>
-      </div>
-
-      <h2>ULTIMAS NOTICIAS MANGAS</h2>
-      <div class="articulos">
-      <article>
-
-        <p> lorep ipsum</p>
-      </article>
-      <article>
-        <p>lorep ipsum</p>
-
-      </article>
-
-      <article>
-          <p>lorep ipsum</p>
+          <div class="mangakas">
+              <article class="col">
+                <p> Manga de Naruto</p>
+                <img src="{% static 'img/portadanaruto.jpg'%}" alt="imgportadanaruto" class="img">
+                <p class="linkani"><a class="clickk" href="https://mangarock.com/manga/mrs-serie-173467/chapter/mrs-chapter-173469">Click para ver capitulos </a></p>
+              </article>
+              <article class="col">
+                <p> Manga de One Piece</p>
+                <img src="{% static 'img/portadaonepiece.jpg' %}" alt="imgbkn" class="img">
+                <p class="linkani"><a class="clickk" href="https://mangalibre.com/manga/one-piece/223/chapter-0#/!page0">Click para ver capitulos </a></p>
+              </article>
+              <article class="col">
+                <p> Manga de HxH 2011</p>
+                <img src="{% static 'img/portadahxh.jpg' %}" alt="imghxh" class="img">
+                <p class="linkani"><a class="clickk" href="https://mangarock.com/manga/mrs-serie-111005/chapter/mrs-chapter-111006">Click para ver capitulos </a></p>
+              </article>
+              <article class="col">
+                  <p> Manga de Kimetsu no Yaiba</p>
+                  <img src="img/portadakimetsu.jpg" alt="imghxh" class="img">
+                  <p class="linkani"><a class="clickk" href="https://mangalibre.com/manga/kimetsu-no-yaiba/1498/chapter-155#/!page0">Click para ver capitulos </a></p>
+              </article>
+              <article class="col">
+                  <p> Manga de Haikyuu!!</p>
+                  <img src="img/portadahaikyu.jpg" alt="imghxh" class="img">
+                  <p class="linkani"><a class="clickk" href="https://mangarock.com/manga/mrs-serie-92499/chapter/mrs-chapter-92500">Click para ver capitulos </a></p>
+              </article>
+              <article class="col">
+                  <p> Manga de Given</p>
+                  <img src="img/portadagiven.jpg" alt="imghxh" class="img">
+                  <p class="linkani"><a class="clickk" href="https://mangarock.com/manga/mrs-serie-85614/chapter/mrs-chapter-85615">Click para ver capitulos </a></p>
   
-        </article>
-</div>
+                </article>
+                <article class="col">
+                    <p> Manga de JoJos</p>
+                    <img src="img/portadajojo.jpg" alt="imghxh" class="img">
+                    <p class="linkani"><a class="clickk" href="https://mangarock.com/manga/mrs-serie-121862/chapter/mrs-chapter-121863">Click para ver capitulos </a></p>
+    
+                </article>
+                <article class="col">
+                    <p> Manga de Artudo Vidal</p>
+                    <img src="img/portadavidal.jpg" alt="imghxh" class="img">
+                    <p class="linkani"><a class="clickk" href="https://mangarock.com/manga/mrs-serie-135622/chapter/mrs-chapter-100022218">Click para ver capitulos </a></p>
+                </article>
+                <article class="col">
+                    <p> Manga de SNK</p>
+                    <img src="img/portadasnk.jpg" alt="imghxh" class="img">
+                    <p class="linkani"><a class="clickk" href="https://mangarock.com/manga/mrs-serie-222870/chapter/mrs-chapter-222871">Click para ver capitulos </a></p>
+                </article>
+                <article class="col">
+                    <p> Manga de DBZ</p>
+                    <img src="img/portadadragon.jpg" alt="imghxh" class="img">
+                    <p class="linkani"><a class="clickk" href="https://mangarock.com/manga/mrs-serie-100145153/chapter/mrs-chapter-100145199">Click para ver capitulos </a></p>
+                </article>
+                <article class="col">
+                    <p> Manga de SC</p>
+                    <img src="img/portadasupercampeones.jpg" alt="imghxh" class="img">
+                    <p class="linkani"><a class="clickk" href="https://www.taringa.net/+imagenes/super-campeones-manga-comic-capitulo-1_gdn5j">Click para ver capitulos </a></p>
+                </article>
+                <article class="col">
+                    <p> Manga de YuGi Oh</p>
+                    <img src="img/portadayugi.jpg" alt="imghxh" class="img">
+                    <p class="linkani"><a class="clickk" href="https://mangarock.com/manga/mrs-serie-282329/chapter/mrs-chapter-282330">Click para ver capitulos </a></p>
+                </article>
+
+                <article class="col">
+                    <p> Manga de Pokemon</p>
+                    <img src="img/portadapokemon.jpg" alt="imghxh" class="img">
+                    <p class="linkani"><a class="clickk" href="https://mangarock.com/manga/mrs-serie-200029151/chapter/mrs-chapter-200030504">Click para ver capitulos </a></p>
+                </article>
+
+                <article class="col">
+                    <p> Manga de Noragami</p>
+                    <img src="img/portadanoragami.jpg" alt="imghxh" class="img">
+                    <p class="linkani"><a class="clickk" href="https://mangarock.com/manga/mrs-serie-179689/chapter/mrs-chapter-179691">Click para ver capitulos </a></p>
+                </article>
+
+                <article class="col">
+                    <p> Manga de Chobits</p>
+                    <img src="img/portadachobits.jpg" alt="imghxh" class="img">
+                    <p class="linkani"><a class="clickk" href="https://mangarock.com/manga/mrs-serie-43800/chapter/mrs-chapter-43801">Click para ver capitulos </a></p>
+                </article>
+                
+
+              </div>
+        </div>
     <footer>
         <P> Contacto: <a href="tel/+569123456789">+569123456789</a></P>
 		<P> Email : <a href="mailto:duoc@hotmail.com">duoc@hotmail.com</a>
